@@ -12,10 +12,12 @@ public class JdbcProject {
 		String query = "SELECT * FROM USER";
 		ResultSet rs = st.executeQuery(query);
 		String loginName="";
+		String eMail="";
 		while(rs.next())
 		{ 
 			loginName = rs.getString("loginname");
-			System.out.println(loginName);
+			eMail = rs.getString("email");
+			System.out.println(loginName+" "+eMail);
 		}
 
 	}
